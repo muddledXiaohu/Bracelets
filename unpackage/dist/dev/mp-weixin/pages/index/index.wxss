@@ -33,4 +33,8 @@ page {
   text-align: center;
   padding: 10px;
 }
+.data-v-57280228 .verification_code .input_info {
+  position: absolute;
+  left: -99999;
+}
 

@@ -1,0 +1,29 @@
+page {
+  background-color: #0c0636;
+}
+
+.backgroundSize.data-v-417bc334 {
+  width: 130px;
+  height: 130px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 34%;
+  z-index: -1;
+}
+.iconfont.data-v-417bc334 {
+  color: #04be01;
+  font-size: 180px;
+  text-align: center;
+  margin-top: 18%;
+}
+.Tips.data-v-417bc334 {
+  color: #fff;
+  font-size: 34px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 14%;
+  letter-spacing: 5px;
+}
+

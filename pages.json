@@ -1,26 +1,26 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
-			"path": "pages/scheduleS/scheduleS",
+			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "课表选择"
+				"navigationBarTitleText": "手环"
 			}
 		},
 		{
-			"path": "pages/examinations/examinations",
+			"path": "pages/recognition/recognition",
 			"style": {
-				"navigationBarTitleText": "考题选择"
-			}
-		},
-
-		{
-			"path": "pages/Generating/Generating",
-			"style": {
-				"navigationBarTitleText": "课表生成中"
+				"navigationBarTitleText": "面部识别"
 			}
 		},
 		{
-			"path": "pages/QRcode/QRcode",
+			"path": "pages/success/Facescan",
+			"style": {
+				"navigationBarTitleText": "识别成功"
+			}
+		},
+		
+		{
+			"path": "pages/success/QRcode",
 			"style": {
 				"navigationBarTitleText": "二维码"
 			}
@@ -32,15 +32,57 @@
 			}
 		},
 		{
-			"path": "pages/index/index",
+			"path": "pages/Generating/Generating",
 			"style": {
-				"navigationBarTitleText": "手环"
+				"navigationBarTitleText": "课表生成中"
 			}
 		},
 		{
-			"path": "pages/recognition/recognition",
+			"path": "pages/Generating/scheduleS",
 			"style": {
-				"navigationBarTitleText": "面部识别"
+				"navigationBarTitleText": "课表选择"
+			}
+		},
+		{
+			"path": "pages/Generating/examinations",
+			"style": {
+				"navigationBarTitleText": "考题选择"
+			}
+		},
+		{
+			"path": "pages/Generating/EnterMachine",
+			"style": {
+				"navigationBarTitleText": "二维码登录一体机"
+			}
+		},
+		{
+			"path": "pages/loginexYes/loginexYes",
+			"style": {
+				"navigationBarTitleText": "进入实训答题"
+			}
+		},
+		{
+			"path": "pages/taskTimes/taskTimes",
+			"style": {
+				"navigationBarTitleText": "倒计时"
+			}
+		},
+		{
+			"path": "pages/yhuanInvestigation/lookHiddenD",
+			"style": {
+				"navigationBarTitleText": "二维码找隐患"
+			}
+		},
+		{
+			"path": "pages/examinationOver/exIOver",
+			"style": {
+				"navigationBarTitleText": "自己退出"
+			}
+		},
+		{
+			"path": "pages/examinationOver/exTimeOver",
+			"style": {
+				"navigationBarTitleText": "时间到"
 			}
 		}
 	],

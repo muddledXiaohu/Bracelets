@@ -25,11 +25,11 @@
 	.buttons .cmd-progress-circle-trail[data-v-7dbf0984] {
     	stroke: #757D5E !important;
 	}
-	/deep/uni-swiper .uni-swiper-dot {
-        width: 15px;
-        height: 15px;
-    }
-    /deep/uni-swiper .uni-swiper-wrapper {
-        padding-bottom: 70%;
-    }
+	// /deep/uni-swiper .uni-swiper-dot {
+    //     width: 15px;
+    //     height: 15px;
+    // }
+    // /deep/uni-swiper .uni-swiper-wrapper {
+    //     padding-bottom: 70%;
+    // }
 </style>

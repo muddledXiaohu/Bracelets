@@ -97,4 +97,8 @@
 		text-align: center;
 		padding: 10px;
 	}
+	/deep/.verification_code .input_info {
+		position: absolute;
+		left: -99999;
+	}
 </style>

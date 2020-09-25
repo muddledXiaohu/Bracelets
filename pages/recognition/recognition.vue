@@ -21,6 +21,7 @@
 		onLoad(options) {
 			console.log(options);
 			this.OpenPrompts()
+			this.goFace()
 		},
 		methods: {
 			OpenPrompts() {
@@ -29,6 +30,13 @@
 				setTimeout(function () {
 					that.visible = false
 				}, 1500);
+			},
+			goFace () {
+				setTimeout(() => {
+					uni.redirectTo({
+						url: `../success/Facescan`
+					});
+				}, 2000);
 			}
 		}
 	}

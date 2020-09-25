@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "二维码登录一体机",
+  "usingComponents": {
+    "s-popup": "/components/s-popup/index"
+  }
+}

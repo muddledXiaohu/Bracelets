@@ -1,0 +1,15 @@
+page {
+  background-color: #0c0636;
+}
+
+text.data-v-6bf995d7 {
+  display: block;
+  width: 70%;
+  color: #fff;
+  font-size: 90rpx;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 5px;
+  margin-top: 50%;
+}
+

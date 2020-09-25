@@ -1,0 +1,28 @@
+page {
+  background-color: #0c0636;
+}
+
+.delete.data-v-65d5008a {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15%;
+  letter-spacing: 5px;
+}
+.Tips.data-v-65d5008a {
+  color: #fff;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 24%;
+  letter-spacing: 5px;
+}
+button.data-v-65d5008a {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40%;
+}
+

@@ -1,0 +1,24 @@
+page {
+  background-color: #0c0636;
+}
+
+.schedule.data-v-79127858 {
+  color: #fff;
+  margin-top: 30%;
+}
+.swiper.data-v-79127858 {
+  height: 800rpx;
+}
+.swiper-item.data-v-79127858 {
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+.swiper-item ._img.data-v-79127858 {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 10%;
+  padding-bottom: 10%;
+}
+

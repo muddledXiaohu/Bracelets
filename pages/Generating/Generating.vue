@@ -31,6 +31,9 @@
                 setInterval(() => {
                     this.down ++
                     if (this.down === 100) {
+                        uni.redirectTo({
+                            url: `../Generating/scheduleS`
+                        });
                         return this.down
                     }
                 }, 30);

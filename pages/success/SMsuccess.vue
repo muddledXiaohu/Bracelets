@@ -16,8 +16,16 @@
 			}
 		},
 		onLoad() {
+            this.goGenKeb()
 		},
 		methods: {
+            goGenKeb () {
+				setTimeout(() => {
+					uni.redirectTo({
+						url: `../Generating/Generating`
+					});
+				}, 700);
+			}
 		}
 	}
 </script>
