@@ -1,0 +1,22 @@
+page {
+  background-color: #0c0636;
+}
+
+
+.data-v-30071914 .s-popup-position-bottom .s-popup-wrapper {
+  left: 0px;
+  right: 0px;
+  bottom: 40%;
+  width: 80%;
+  height: 160px;
+  margin: auto;
+  line-height: 177%;
+  background-color: #3f3e68;
+  color: #fff;
+  font-size: 43px;
+  word-wrap: break-word;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px;
+}
+

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "手环",
+  "usingComponents": {
+    "verification-code-style": "/components/verification-code-style2/verification-code-style2",
+    "s-popup": "/components/s-popup/index"
+  }
+}

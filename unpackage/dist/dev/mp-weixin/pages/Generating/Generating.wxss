@@ -1,0 +1,32 @@
+page {
+  background-color: #0c0636;
+}
+
+.generats.data-v-269ddff4 {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 18%;
+  position: relative;
+}
+.kants.data-v-269ddff4 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.buttons.data-v-269ddff4 {
+  position: absolute;
+  top: 37%;
+  left: 37%;
+}
+.geners.data-v-269ddff4 {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 20%;
+  font-size: 35px;
+  letter-spacing: 8px;
+  font-weight: 500;
+}
+

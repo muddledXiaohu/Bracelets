@@ -1,0 +1,36 @@
+page {
+  background-color: #0c0636;
+}
+
+.content .id.data-v-57280228 {
+  text-align: center;
+  font-size: 90rpx;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  padding-bottom: 150rpx;
+}
+.content.data-v-57280228 {
+  width: 500rpx;
+  margin: 20% auto;
+}
+.input_info.data-v-57280228 {
+  border-bottom: 1px solid #000;
+}
+.data-v-57280228 .s-popup-position-bottom .s-popup-wrapper {
+  left: 0px;
+  right: 0px;
+  bottom: 40%;
+  width: 80%;
+  height: 160px;
+  margin: auto;
+  line-height: 177%;
+  background-color: #3f3e68;
+  color: #fff;
+  font-size: 43px;
+  word-wrap: break-word;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px;
+}
+

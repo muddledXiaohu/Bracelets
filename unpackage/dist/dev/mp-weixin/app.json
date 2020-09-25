@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/scheduleS/scheduleS",
+    "pages/examinations/examinations",
+    "pages/Generating/Generating",
+    "pages/QRcode/QRcode",
+    "pages/success/SMsuccess",
+    "pages/index/index",
+    "pages/recognition/recognition"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#008c8c"
+  },
+  "usingComponents": {}
+}

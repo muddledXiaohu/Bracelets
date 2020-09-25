@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "面部识别",
+  "usingComponents": {
+    "s-popup": "/components/s-popup/index"
+  }
+}

@@ -1,0 +1,31 @@
+.verification_code {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.verification_code .verification_code_continor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+}
+.verification_code .verification_code_continor text {
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 30px;
+  color: #fff;
+}
+.verification_code .verification_code_continor text:not(:first-child) {
+  margin-left: 10rpx;
+}
+.verification_code .input_info {
+  width: 1200rpx;
+  height: 60rpx;
+  border: 1px solid red;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -700rpx;
+}
+

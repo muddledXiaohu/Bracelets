@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "课表生成中",
+  "usingComponents": {
+    "cmd-progress": "/components/cmd-progress/cmd-progress"
+  }
+}

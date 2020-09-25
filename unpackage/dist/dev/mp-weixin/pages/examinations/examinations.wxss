@@ -1,0 +1,23 @@
+page {
+  background-color: #0c0636;
+}
+
+
+.data-v-6c362174 button {
+  width: 40%;
+  border-radius: 30px;
+  letter-spacing: 3px;
+}
+.unimt.data-v-6c362174 {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  margin-top: 12%;
+  line-height: 160px;
+  text-align: center;
+}
+.iconfont.data-v-6c362174 {
+  font-size: 110px;
+  color: #fff;
+}
+
