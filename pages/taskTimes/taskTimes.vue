@@ -1,4 +1,5 @@
 <template>
+<!-- 考试倒计时 -->
 	 <view class="content">
         <view class="delete">距离考试结束还剩</view>
          <view class="Tips">

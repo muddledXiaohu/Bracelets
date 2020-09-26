@@ -12,17 +12,17 @@
 			}
 		},
 		onLoad() {
-			// this.setinout()
+			this.setinout()
 		},
 		methods: {
-			// 返回课程表
-			// setinout () {
-			// 	setTimeout(() => {
-			// 		uni.redirectTo({
-            //             url: '../Generating/scheduleS'
-            //         });
-			// 	}, 1000);
-			// }
+			// 跳转到扫码页面
+			setinout () {
+				setTimeout(() => {
+					uni.redirectTo({
+                        url: './EwmLookdisaster'
+                    });
+				}, 1000);
+			}
 		}
 	}
 </script>

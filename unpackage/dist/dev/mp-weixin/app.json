@@ -12,6 +12,7 @@
     "pages/loginexYes/loginexYes",
     "pages/taskTimes/taskTimes",
     "pages/yhuanInvestigation/lookHiddenD",
+    "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/examinationOver/exIOver",
     "pages/examinationOver/exTimeOver"
   ],

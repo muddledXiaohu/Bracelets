@@ -11,7 +11,7 @@
 				<view class="unimt">
 					<text class="iconfont icon-delete">&#xe632;</text>
 				</view>
-            	<button type="primary">隐患排查</button>
+            	<button type="primary" @click="JumpScene">隐患排查</button>
 		   </view>
 	   </view>
 	 </view>
@@ -26,9 +26,16 @@
 		onLoad() {
 		},
 		methods: {
+			// 实训考试
 			TrainingExam () {
 				uni.redirectTo({
                     url: `../loginexYes/loginexYes`
+                });
+			},
+			// 隐患查找
+			JumpScene () {
+				uni.redirectTo({
+                    url: `../yhuanInvestigation/lookHiddenD`
                 });
 			}
 		}

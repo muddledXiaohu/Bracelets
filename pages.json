@@ -70,6 +70,12 @@
 		{
 			"path": "pages/yhuanInvestigation/lookHiddenD",
 			"style": {
+				"navigationBarTitleText": "二维码找隐患提示"
+			}
+		},
+		{
+			"path": "pages/yhuanInvestigation/EwmLookdisaster",
+			"style": {
 				"navigationBarTitleText": "二维码找隐患"
 			}
 		},
