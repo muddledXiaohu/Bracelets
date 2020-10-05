@@ -1,6 +1,12 @@
 {
 	"pages": [
 		{
+			"path": "pages/taskTimes/taskTimes",
+			"style": {
+				"navigationBarTitleText": "倒计时"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "手环"
@@ -59,12 +65,6 @@
 			"path": "pages/loginexYes/loginexYes",
 			"style": {
 				"navigationBarTitleText": "进入实训答题"
-			}
-		},
-		{
-			"path": "pages/taskTimes/taskTimes",
-			"style": {
-				"navigationBarTitleText": "倒计时"
 			}
 		},
 		{

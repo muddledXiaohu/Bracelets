@@ -1935,18 +1935,18 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 164:
+/***/ 181:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 165);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 182);
 
 /***/ }),
 
-/***/ 165:
+/***/ 182:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -1977,7 +1977,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 166);
+module.exports = __webpack_require__(/*! ./runtime */ 183);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -1994,7 +1994,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 166:
+/***/ 183:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -8812,7 +8812,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 45:
+/***/ 55:
 /*!********************************************************!*\
   !*** D:/ZA/shBracelet/Bracelets/assets/images/ewm.png ***!
   \********************************************************/

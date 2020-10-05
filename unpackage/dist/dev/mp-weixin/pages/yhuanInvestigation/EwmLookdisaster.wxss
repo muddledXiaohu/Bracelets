@@ -15,7 +15,8 @@ page {
   color: #fff;
   font-size: 43px;
   word-wrap: break-word;
-  border-radius: 50px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
   text-align: center;
   padding: 10px;
 }
@@ -53,7 +54,8 @@ page {
   width: 26%;
   padding: 0;
   margin: 0 20px;
-  border-radius: 30px;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
 }
 .surplus.data-v-75dffe74 {
   color: #fff;

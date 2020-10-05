@@ -4,25 +4,25 @@ page {
 
 .delete.data-v-65d5008a {
   color: #fff;
-  font-size: 30px;
+  font-size: 16px;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 2%;
   letter-spacing: 5px;
 }
 .Tips.data-v-65d5008a {
   color: #fff;
-  font-size: 100px;
+  font-size: 40px;
   text-align: center;
   font-weight: 700;
-  margin-top: 24%;
   letter-spacing: 5px;
 }
-button.data-v-65d5008a {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 40%;
+.data-v-65d5008a view.data-v-15e25b84 {
+  color: #fff;
+}
+.data-v-65d5008a .answer__banner.data-v-15e25b84 {
+  height: 260rpx;
+}
+.data-v-65d5008a .answer__next__btn.data-v-15e25b84 {
+  bottom: 7%;
 }
 

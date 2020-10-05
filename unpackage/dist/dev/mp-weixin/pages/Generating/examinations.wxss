@@ -5,7 +5,8 @@ page {
 
 .data-v-2f768696 button {
   width: 40%;
-  border-radius: 30px;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
   letter-spacing: 3px;
 }
 .unimt.data-v-2f768696 {

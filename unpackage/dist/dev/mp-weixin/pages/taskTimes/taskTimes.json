@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "倒计时",
-  "usingComponents": {}
+  "usingComponents": {
+    "check-xi": "/components/xi-check/xi-check"
+  }
 }

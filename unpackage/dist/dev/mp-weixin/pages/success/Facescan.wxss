@@ -6,7 +6,8 @@ page {
   width: 130px;
   height: 130px;
   background-color: #fff;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   position: absolute;
   top: 12%;
   left: 34%;
