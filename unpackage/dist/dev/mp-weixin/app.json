@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/taskTimes/taskTimes",
+    "pages/yhuanInvestigation/content",
     "pages/index/index",
     "pages/recognition/recognition",
     "pages/success/Facescan",
@@ -9,8 +9,10 @@
     "pages/Generating/Generating",
     "pages/Generating/scheduleS",
     "pages/Generating/examinations",
+    "pages/yhuanInvestigation/startLearn",
     "pages/Generating/EnterMachine",
     "pages/loginexYes/loginexYes",
+    "pages/taskTimes/taskTimes",
     "pages/yhuanInvestigation/lookHiddenD",
     "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/examinationOver/exIOver",
@@ -23,6 +25,5 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#008c8c"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap75.json"
+  "usingComponents": {}
 }

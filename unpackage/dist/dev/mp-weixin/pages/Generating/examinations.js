@@ -180,6 +180,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -199,6 +205,13 @@ var _default =
     JumpScene: function JumpScene() {
       uni.redirectTo({
         url: "../yhuanInvestigation/lookHiddenD" });
+
+    },
+
+    // 开始学习
+    StartLearning: function StartLearning() {
+      uni.redirectTo({
+        url: "../yhuanInvestigation/startLearn" });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

@@ -238,7 +238,7 @@ __webpack_require__.r(__webpack_exports__);
     // 退出
     signOut: function signOut() {
       uni.showModal({
-        title: '您是否确定要提前退出考试',
+        title: '您是否确定要退出考试',
         success: function success(res) {
           if (res.confirm) {
             uni.redirectTo({

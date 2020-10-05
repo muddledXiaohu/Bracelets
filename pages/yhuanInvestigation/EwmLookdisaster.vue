@@ -6,7 +6,7 @@
             <button class="mini-btn" type="warn" @click="end">结束</button>
          </view>
          <view class="icons">
-            <text class="iconfont icon-delete" @click="OpenQR">&#xe611;</text>
+            <text class="iconfont icon-delete" @click="OpenQR">&#xe600;</text>
          </view>
          <view class="buttons">
             <button class="mini-btn" type="primary" @click="Reset">重置</button>

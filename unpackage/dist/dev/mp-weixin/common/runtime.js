@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/xi-check/xi-check":1,"components/s-popup/index":1,"components/verification-code-style2/verification-code-style2":1,"components/cmd-progress/cmd-progress":1};
+/******/ 		var cssChunks = {"components/s-popup/index":1,"components/verification-code-style2/verification-code-style2":1,"components/cmd-progress/cmd-progress":1,"components/xi-check/xi-check":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/xi-check/xi-check":"components/xi-check/xi-check","components/s-popup/index":"components/s-popup/index","components/verification-code-style2/verification-code-style2":"components/verification-code-style2/verification-code-style2","components/cmd-progress/cmd-progress":"components/cmd-progress/cmd-progress"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/s-popup/index":"components/s-popup/index","components/verification-code-style2/verification-code-style2":"components/verification-code-style2/verification-code-style2","components/cmd-progress/cmd-progress":"components/cmd-progress/cmd-progress","components/xi-check/xi-check":"components/xi-check/xi-check"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
