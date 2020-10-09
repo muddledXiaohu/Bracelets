@@ -3,21 +3,15 @@
        <view class="examinatin">
 		   <view>
 				<view class="unimt">
-					<text class="iconfont icon-delete">&#xe60c;</text>
+					<text class="iconfont icon-delete">&#xe62f;</text>
 				</view>
-            	<button type="primary" @click="StartLearning">开始学习</button>
+            	<button type="primary" @click="StartLearning">一体机考试</button>
 		   </view>
 		   <view>
 				<view class="unimt">
 					<text class="iconfont icon-delete">&#xe62f;</text>
 				</view>
-            	<button type="primary" @click="TrainingExam">实训考试</button>
-		   </view>
-		   <view>
-				<view class="unimt">
-					<text class="iconfont icon-delete">&#xe632;</text>
-				</view>
-            	<button type="primary" @click="JumpScene">隐患排查</button>
+            	<button type="primary" @click="TrainingExam">手机考试</button>
 		   </view>
 	   </view>
 	 </view>
@@ -32,23 +26,14 @@
 		onLoad() {
 		},
 		methods: {
-			// 实训考试
 			TrainingExam () {
 				uni.redirectTo({
-                    url: `../loginexYes/choice`
+                    url: `../taskTimes/taskTimes`
                 });
 			},
-			// 隐患查找
-			JumpScene () {
-				uni.redirectTo({
-                    url: `../yhuanInvestigation/lookHiddenD`
-                });
-			},
-
-			// 开始学习
 			StartLearning () {
 				uni.redirectTo({
-                    url: `../yhuanInvestigation/startLearn`
+                    url: `../loginexYes/loginexYes`
                 });
 			}
 		}
@@ -72,7 +57,7 @@
 		width: 110px;
 		height: 100px;
 		margin: 0 auto;
-		margin-top: 12%;
+		margin-top: 30%;
 		line-height: 80px;
 		text-align: center;
 	}

@@ -24,7 +24,7 @@
             goTimestsk () {
 				setTimeout(() => {
 					uni.redirectTo({
-						url: `../taskTimes/taskTimes`
+						url: `../Generating/Generating`
 					});
 				}, 700);
 			}

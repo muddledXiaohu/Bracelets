@@ -1,9 +1,9 @@
 {
 	"pages": [
 		{
-			"path": "pages/yhuanInvestigation/content",
+			"path": "pages/Generating/examinations",
 			"style": {
-				"navigationBarTitleText": "学习内容"
+				"navigationBarTitleText": "考题选择"
 			}
 		},
 		
@@ -50,12 +50,7 @@
 				"navigationBarTitleText": "课表选择"
 			}
 		},
-		{
-			"path": "pages/Generating/examinations",
-			"style": {
-				"navigationBarTitleText": "考题选择"
-			}
-		},
+		
 		{
 			"path": "pages/yhuanInvestigation/startLearn",
 			"style": {
@@ -63,9 +58,21 @@
 			}
 		},
 		{
+			"path": "pages/yhuanInvestigation/content",
+			"style": {
+				"navigationBarTitleText": "学习内容"
+			}
+		},
+		{
 			"path": "pages/Generating/EnterMachine",
 			"style": {
 				"navigationBarTitleText": "二维码登录一体机"
+			}
+		},
+		{
+			"path": "pages/loginexYes/choice",
+			"style": {
+				"navigationBarTitleText": "考试选择"
 			}
 		},
 		{
