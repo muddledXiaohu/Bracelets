@@ -1,5 +1,6 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
 		<s-popup custom-class="demo-popup" position="bottom" v-model="visible">
 				<!-- 内容 -->
 				请将手环对准一体机二维码
@@ -42,14 +43,15 @@
 		}
 	}
 </script>
-
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 	/deep/.s-popup-position-bottom .s-popup-wrapper {
 		left: 0px;
 		right: 0px;

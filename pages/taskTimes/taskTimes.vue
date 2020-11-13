@@ -1,77 +1,70 @@
 <template>
 <!-- 考试倒计时 -->
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
         <view class="delete">距离考试结束还剩</view>
          <view class="Tips">
            {{countdown}}
          </view>
          <!-- 选择题 -->
-        <view class="content">
-            <check-xi @nextAnswer="nextAnswer" @checkOption="checkOption" :questionList="questionList"></check-xi>
-        </view>
 
-        <!-- <button @click="signOut" type="warn">Normal</button> -->
-	 </view>
+        <view class="uni-padding-wrap">
+            <view class="page-section swiper">
+                <view class="page-section-spacing">
+                    <swiper :style="{height: windowHeight / 1.3 + 'px'}" class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay">
+                        <swiper-item v-for="item in questionList" :key="item.indicator">
+                            <view class="swiper-item uni-bg-red">
+                                 <view class="uni-form-item uni-column">
+                                    <view class="title titleID">{{item.id}}</view>
+                                    <view class="title">{{item.ask}}</view>
+                                    <radio-group name="radio" @change="qweasd" :id="item.id">
+                                        <label>
+                                            <radio  value="1" /><text>A：{{item.A}}</text>
+                                        </label>
+                                        <label>
+                                            <radio  value="2" /><text>B：{{item.B}}</text>
+                                        </label>
+                                        <label>
+                                            <radio  value="3" /><text>C：{{item.C}}</text>
+                                        </label>
+                                    </radio-group>
+                                </view>
+                            </view>
+                        </swiper-item>
+                    </swiper>
+                </view>
+            </view>
+            </view>
+            <button @click="an" :style="{width: windowWidth / 1.3 + 'px'}">试卷提交</button>
+    </view>
+
 </template>
 
 <script>
-    import checkXi from '@/components/xi-check/xi-check.vue'
 	export default {
-        components:{
-            checkXi
-        },
 		data() {
 		    return {
+                autoplay: false,
+                indicatorDots: true,
                 countdown: '',
-                 colorStyle: { // 颜色修改自定义 -- 若需修改必须全部都要有！！！
-                    nextBac: '#C9784F', //下一题按钮背景色
-                    nextCol: '#FFFFFF', //下一题按钮背字体颜色
-                    optBac: '#EEB67A', //选项按钮背景色
-                    optCol: '#232131', //选项按钮字体颜色
-                    optBacActive: '#C9784F', //选项按钮背景色 - 选中
-                    optColActive: '#FFFFFF', //选项按钮字体颜色-选中
-                },
-                questionList:[
-                    {
-                        id:1, //题目id
-                        type:'radio',//单选 checkbox - 多选 ； write - 填空 
-                        number:1, //题目序号 - 非必要
-                        title:'生物灭绝又叫生物绝种。历史上一共有几次大灭绝？', //题目名称
-                        imageList:['https://car2.autoimg.cn/cardfs/product/g3/M04/6C/76/1024x0_1_q95_autohomecar__ChsEm18wzhKARxf4ABHDjRTzR6U737.jpg'], //图片地址
-                        question_option:[
-                            {
-                                id:1,//答案id
-                                name:'A',//答案选项名
-                                content:'一次',//答案内容
-                                active:0//选中状态
-                            },
-                            {id:2,name:'B',content:'二次',active:0},
-                            {id:3,name:'C',content:'三次',active:0},
-                            {id:4,name:'D',content:'四次',active:0},
-                            ]//选项集
-                    },
-                    {
-                        id:2, //题目id
-                        type:'radio',//单选 checkbox - 多选 ； write - 填空 
-                        number:1, //题目序号 - 非必要
-                        title:'三相电流不平衡，缺相（P1587612851123-00-T03-10-0000-00A00-323A-Z）？', //题目名称
-                        question_option:[
-                            {
-                                id:1,//答案id
-                                name:'A',//答案选项名
-                                content:'一次',//答案内容
-                                active:0//选中状态
-                            },
-                            {id:2,name:'B',content:'二次',active:0},
-                            {id:3,name:'C',content:'三次',active:0},
-                            {id:4,name:'D',content:'四次',active:0},
-                            ]//选项集
-                    },
-                ]
+                questionList:[],
+                windowWidth: 0,
+                windowHeight: 0,
+                // 选择答案
+                choice: [],
+                // 提交答案
+                Submis: []
 			}
 		},
 		onLoad() {
             this.addtime();
+            this.integratedm();
+            uni.getSystemInfo({
+                success: res => {
+                    this.windowWidth = res.windowWidth;
+                    this.windowHeight = res.windowHeight;
+                }
+            })
         },
 		methods: {
              addtime() {
@@ -95,8 +88,24 @@
                     url: '../examinationOver/exTimeOver'
                 });
             },
+            qweasd(e) {
+                const id = e.target.id;
+                const value = e.target.value;
+                this.choice.unshift({id: id, value: value})
+                console.log(this.choice);
+            },
 
-            // 退出
+            an() {
+                let hash = {};
+                this.choice = this.choice.reduce((preVal, curVal) => {
+                    hash[curVal.id] ? '' : hash[curVal.id] = true && preVal.push(curVal);
+                    return preVal
+                }, []);
+                console.log(this.choice);
+                this.signOut()
+            },
+
+            // // 退出
             signOut () {
                 uni.showModal({
                     title: '您是否确定要退出考试',
@@ -112,27 +121,32 @@
                 });
             },
 
-            // 选择题
-            nextAnswer(e){
-                console.log('next',e);
-                if (e.isEnd) {
-                    this.signOut()
-                }
-            },
-            checkOption(e){
-                console.log('check',e);
+            // 考题获取
+            integratedm() {
+                uni.request({
+                    url: 'http://localhost:5000/integKAOt', //仅为示例，并非真实接口地址。
+                    success: res => {
+                        const data = res.data
+                        this.questionList = data
+                    }
+                })
             }
 		}
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+    view{
+        color: #fff;
+    }
     .delete{
         color: #fff;
         font-size: 16px;
@@ -147,24 +161,45 @@
         font-weight: 700;
         letter-spacing: 5px;
     }
-    // button{
-    //     position: fixed;
-    //     bottom: 7%;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     width: 100%;
-    //     display: none;
-    // }
-    /deep/view.data-v-15e25b84 {
+    .title{
+        width: 100%;
+        text-align: center;
+        margin: 5% 0;
+    }
+    label{
+        width: 80%;
+        margin-left: 5%;
+        display: block;
+        background-color: cornflowerblue;
+        border-radius: 5px;
+        margin: 5% auto;
+        position: relative;
+    }
+    text{
+        padding-left: 30%;
+        padding-top: 5%;
+        padding-bottom: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    radio{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1%;
+    }
+    .titleID{
+        margin: 0 auto;
+        text-align: center;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: cadetblue;
+    }
+    button{
+        background-color: cornflowerblue;
         color: #fff;
     }
-    /deep/.answer__banner.data-v-15e25b84 {
-        height: 260rpx;
-    }
-    /deep/.answer__next__btn.data-v-15e25b84 {
-        bottom: 7%;
-    }
-
-    // /deep/.answer__next__btn.data-v-15e25b84 {
-    // }
 </style>

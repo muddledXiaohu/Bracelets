@@ -1,6 +1,7 @@
 <template>
 <!-- 二维码找隐患 -->
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
          <view class="tops">
             <button class="mini-btn btnone" type="primary" @click="revoke">撤销</button>
             <button class="mini-btn" type="warn" @click="end">结束</button>
@@ -24,7 +25,6 @@
 			}
 		},
 		onLoad(options) {
-            console.log(options);
 		},
 		methods: {
 			OpenQR() {
@@ -35,7 +35,6 @@
                     success: function (res) {
                         // console.log('条码类型：' + res.scanType);
                         // console.log('条码内容：' + res.result);
-
                         // 答题结束退出
                         if (that.numbers == 14) {
                             uni.redirectTo({
@@ -51,7 +50,23 @@
 							url: './EwmLookdisaster'
                         });
                     }
-				})
+                })
+                setTimeout(() => {
+                    uni.request({
+                        url: 'http://localhost:5000/RQLongin',
+                        method: 'POST',
+					    data: {
+					        "username": "qwe"
+                        },
+                        dataType: 'json', 
+                        header: {
+                            'content-type': 'application/x-www-form-urlencoded'  //自定义请求头信息
+                        },
+                        success: (res) => {
+                            console.log(res);
+                        }
+                    })
+                }, 3000);
             },
 
             // 撤销
@@ -86,13 +101,15 @@
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 	/deep/.s-popup-position-bottom .s-popup-wrapper {
 		left: 0px;
 		right: 0px;

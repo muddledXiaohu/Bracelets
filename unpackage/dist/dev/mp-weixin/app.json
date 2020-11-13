@@ -1,19 +1,17 @@
 {
   "pages": [
-    "pages/Generating/examinations",
     "pages/index/index",
     "pages/recognition/recognition",
     "pages/success/Facescan",
-    "pages/success/QRcode",
-    "pages/success/SMsuccess",
     "pages/Generating/Generating",
     "pages/Generating/scheduleS",
-    "pages/yhuanInvestigation/startLearn",
-    "pages/yhuanInvestigation/content",
+    "pages/Generating/examinations",
     "pages/Generating/EnterMachine",
+    "pages/yhuanInvestigation/startLearn",
     "pages/loginexYes/choice",
-    "pages/loginexYes/loginexYes",
     "pages/taskTimes/taskTimes",
+    "pages/loginexYes/loginexYes",
+    "pages/loginexYes/QRlogin",
     "pages/yhuanInvestigation/lookHiddenD",
     "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/examinationOver/exIOver",
@@ -26,5 +24,6 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#008c8c"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap31.json"
 }

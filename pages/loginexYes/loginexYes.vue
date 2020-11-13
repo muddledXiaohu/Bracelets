@@ -1,12 +1,12 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
         <view class="backgroundSize">
         </view>
         <view class="iconfont icon-delete">&#xe73c;</view>
          <view class="Tips">
              登录成功
              <br />
-             您有30分钟答题
          </view>
 	 </view>
 </template>
@@ -32,13 +32,15 @@
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
     .backgroundSize{
         width: 130px;
         height: 130px;

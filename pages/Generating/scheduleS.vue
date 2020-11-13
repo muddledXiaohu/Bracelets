@@ -1,5 +1,6 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
          <view class="schedule">
             <view class="uni-padding-wrap">
                 <view class="page-section swiper">
@@ -8,7 +9,8 @@
                             <swiper-item  v-for="(item, index) in text" :key="index">
                                 <view class="swiper-item uni-bg-red" @click="examination(item)">
                                     <text>{{item.id}}</text>
-                                    <img :src="item.img_url" alt="" />
+                                    <!-- <img :src="item.img_url" alt="" /> -->
+                                    <img src="../../../../对接文件/图标(2)/吴兴项目图标-02.png" alt="" />
                                 </view>
                             </swiper-item>
                         </swiper>
@@ -66,13 +68,15 @@
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
     .schedule{
         color: #fff;
         margin-top: 30%;

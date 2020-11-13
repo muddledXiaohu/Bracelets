@@ -1,5 +1,6 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
 		<s-popup custom-class="demo-popup" position="bottom" v-model="visible">
 				<!-- 内容 -->
 				实人身份验证请正视摄像头
@@ -21,7 +22,7 @@
 		onLoad(options) {
 			console.log(options);
 			this.OpenPrompts()
-			this.goFace()
+			this.chooseImages()
 		},
 		methods: {
 			OpenPrompts() {
@@ -29,26 +30,46 @@
 				const that = this
 				setTimeout(function () {
 					that.visible = false
-				}, 1500);
+				}, 800);
 			},
-			goFace () {
+			chooseImages () {
 				setTimeout(() => {
-					uni.redirectTo({
-						url: `../success/Facescan`
-					});
-				}, 2000);
+					uni.chooseImage({
+					count: 1, //默认9
+					sizeType: ['compressed'],
+					sourceType: ['camera','album'], //从相册选择
+					success: (res) => {
+						this.src = res.tempFilePaths[0]
+            			uni.getFileSystemManager().readFile({
+							filePath: this.src,
+							encoding: 'base64',
+							success: r => {
+								console.log(r);
+								console.log(`data:image/png;base64,${r.data}`);
+								if (r.data.length !== 0) {
+									uni.redirectTo({
+										url: `../success/Facescan`
+									});
+								}
+							}
+                        })
+					}
+                })
+				}, 1000);
 			}
 		}
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 	/deep/.s-popup-position-bottom .s-popup-wrapper {
 		left: 0px;
 		right: 0px;
@@ -65,5 +86,7 @@
 		text-align: center;
 		padding: 10px;
 	}
-
+	button{
+		color: #ccc;
+	}
 </style>

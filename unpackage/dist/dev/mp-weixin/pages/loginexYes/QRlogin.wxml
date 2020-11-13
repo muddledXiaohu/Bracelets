@@ -1,0 +1,1 @@
+<view class="content data-v-23421d06"><image class="bg-set data-v-23421d06" src="/assets/images/bgi.jpg"></image><view class="icons data-v-23421d06"><text data-event-opts="{{[['tap',[['OpenQR',['$event']]]]]}}" class="iconfont icon-delete data-v-23421d06" bindtap="__e"></text></view></view>

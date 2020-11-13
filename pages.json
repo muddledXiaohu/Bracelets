@@ -1,13 +1,6 @@
 {
 	"pages": [
 		{
-			"path": "pages/Generating/examinations",
-			"style": {
-				"navigationBarTitleText": "考题选择"
-			}
-		},
-		
-		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "手环"
@@ -27,18 +20,6 @@
 		},
 		
 		{
-			"path": "pages/success/QRcode",
-			"style": {
-				"navigationBarTitleText": "二维码"
-			}
-		},
-		{
-			"path": "pages/success/SMsuccess",
-			"style": {
-				"navigationBarTitleText": "扫码成功"
-			}
-		},
-		{
 			"path": "pages/Generating/Generating",
 			"style": {
 				"navigationBarTitleText": "课表生成中"
@@ -52,21 +33,22 @@
 		},
 		
 		{
-			"path": "pages/yhuanInvestigation/startLearn",
+			"path": "pages/Generating/examinations",
 			"style": {
-				"navigationBarTitleText": "学习开始"
+				"navigationBarTitleText": "考题选择"
 			}
 		},
-		{
-			"path": "pages/yhuanInvestigation/content",
-			"style": {
-				"navigationBarTitleText": "学习内容"
-			}
-		},
+
 		{
 			"path": "pages/Generating/EnterMachine",
 			"style": {
 				"navigationBarTitleText": "二维码登录一体机"
+			}
+		},
+		{
+			"path": "pages/yhuanInvestigation/startLearn",
+			"style": {
+				"navigationBarTitleText": "学习开始"
 			}
 		},
 		{
@@ -76,15 +58,22 @@
 			}
 		},
 		{
+			"path": "pages/taskTimes/taskTimes",
+			"style": {
+				"navigationBarTitleText": "倒计时"
+			}
+		},
+
+		{
 			"path": "pages/loginexYes/loginexYes",
 			"style": {
 				"navigationBarTitleText": "进入实训答题"
 			}
 		},
 		{
-			"path": "pages/taskTimes/taskTimes",
+			"path": "pages/loginexYes/QRlogin",
 			"style": {
-				"navigationBarTitleText": "倒计时"
+				"navigationBarTitleText": "扫码登录"
 			}
 		},
 		{

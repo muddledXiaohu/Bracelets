@@ -1,5 +1,6 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
        <view class="examinatin">
 		   <view>
 				<view class="unimt">
@@ -34,20 +35,20 @@
 		methods: {
 			// 实训考试
 			TrainingExam () {
-				uni.redirectTo({
+				uni.navigateTo({
                     url: `../loginexYes/choice`
                 });
 			},
 			// 隐患查找
 			JumpScene () {
-				uni.redirectTo({
+				uni.navigateTo({
                     url: `../yhuanInvestigation/lookHiddenD`
                 });
 			},
 
 			// 开始学习
 			StartLearning () {
-				uni.redirectTo({
+				uni.navigateTo({
                     url: `../yhuanInvestigation/startLearn`
                 });
 			}
@@ -55,13 +56,15 @@
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 	/deep/button{
 		color: #fff;
 		width: 40%;

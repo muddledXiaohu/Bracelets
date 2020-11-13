@@ -1,5 +1,6 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
          <view class="generats">
             <cmd-progress  type="circle" :percent="down" :showInfo="false" :stroke-width="15" :width="200" stroke-color="#21B574">
             </cmd-progress>
@@ -36,20 +37,22 @@
                         });
                         return this.down
                     }
-                }, 30);
+                }, 10);
             }
 
 		}
 	}
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
     .generats{
         width: 200px;
         height: 200px;

@@ -1,1 +1,1 @@
-<view class="content data-v-64d7087f"><view class="backgroundSize data-v-64d7087f"></view><view class="iconfont icon-delete data-v-64d7087f"></view><view class="Tips data-v-64d7087f">认证成功</view></view>
+<view class="content data-v-64d7087f"><image class="bg-set data-v-64d7087f" src="/assets/images/bgi.jpg"></image><view class="backgroundSize data-v-64d7087f"></view><view class="iconfont icon-delete data-v-64d7087f"></view><view class="Tips data-v-64d7087f">认证成功</view></view>

@@ -1,5 +1,6 @@
 <template>
 	 <view class="content">
+		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
 		 <text class="id"> 预 约 ID 号 </text>
 	        <verification-code-style borderStyle="border-bottom:2px solid #fff" borderCheckStyle="border-bottom:2px solid #008c8c;"
 	         :latticeNum="6" @getInputVerification="getInputVerification"></verification-code-style>
@@ -15,9 +16,9 @@
 	import sPopup from '@/components/s-popup/index.vue';
 	export default {
 		 components: {
-					verificationCodeStyle,
-					sPopup
-		        },
+			verificationCodeStyle,
+			sPopup
+		},
 		        data() {
 		            return {
 						visible: false,
@@ -26,17 +27,36 @@
 					}
 		        },
 		        onLoad() {
+					this.getInputVerification();
 		        },
 		        methods: {
 		            // 用户输入的值
-		            getInputVerification(e) {
-						if (e.length === 6) {
-							this.id = e
-							if (this.id.length === 6) {
-								console.log(this.id);
-								this.and = 0
-								this.and === 0 ? this.ClosePrompt() : this.OpenPrompt()
-							}
+		            async getInputVerification(e) {
+						var that = this
+						this.id = e
+						console.log(e);
+						if (this.id.length === 6) {
+							uni.request({
+								url:"http://localhost:5000/fractionss",
+								method:"POST",
+								data:{
+									number:this.id
+								},
+								header: {
+									'content-type': 'application/x-www-form-urlencoded', 
+								},
+								success:function(res){
+									// uni.setStorageSync('storage_key', res.data);
+									uni.setStorage({
+										key:'storage_key',
+										data:res.data
+									})
+									res.data.status !== 200 ? that.OpenPrompt() : that.ClosePrompt()
+								},
+								fail:function(res){
+									console.log(res)
+								}
+							});
 						}
 					},
 
@@ -59,13 +79,15 @@
 		    }
 </script>
 
-<style lang="less">
-	page{
-		background-color:rgb(12, 6, 54);
-	}
-</style>
-
 <style lang="less" scoped>
+	.bg-set{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 	.content .id{
 		text-align: center;
 		font-size: 90rpx;
@@ -97,8 +119,11 @@
 		text-align: center;
 		padding: 10px;
 	}
-	/deep/.verification_code .input_info {
-		position: absolute;
-		left: -99999;
-	}
+	// /deep/.verification_code .input_info {
+	// 	position: absolute;
+	// 	left: -99999;
+	// }
+	// /deep/.style2--verification_code .style2--input_info {
+	// 	width: 0;
+	// }
 </style>
