@@ -168,7 +168,7 @@ var _default =
           // console.log('条码类型：' + res.scanType);
           // console.log('条码内容：' + res.result);
           // 答题结束退出
-          if (that.numbers == 14) {
+          if (that.numbers == 9) {
             uni.redirectTo({
               url: '../examinationOver/exIOver' });
 

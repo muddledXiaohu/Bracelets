@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
 		 <text class="id"> 预 约 ID 号 </text>
 	        <verification-code-style borderStyle="border-bottom:2px solid #fff" borderCheckStyle="border-bottom:2px solid #008c8c;"
 	         :latticeNum="6" @getInputVerification="getInputVerification"></verification-code-style>

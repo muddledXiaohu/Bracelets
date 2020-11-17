@@ -1,7 +1,7 @@
 <template>
 <!-- 二维码找隐患 -->
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
          <view class="tops">
             <button class="mini-btn btnone" type="primary" @click="revoke">撤销</button>
             <button class="mini-btn" type="warn" @click="end">结束</button>
@@ -11,7 +11,7 @@
          </view>
          <view class="buttons">
             <button class="mini-btn" type="primary" @click="Reset">重置</button>
-            <text class="surplus">{{numbers}}/15</text>
+            <text class="surplus">{{numbers}}/10</text>
          </view>
 	 </view>
 </template>
@@ -36,7 +36,7 @@
                         // console.log('条码类型：' + res.scanType);
                         // console.log('条码内容：' + res.result);
                         // 答题结束退出
-                        if (that.numbers == 14) {
+                        if (that.numbers == 9) {
                             uni.redirectTo({
                                 url: '../examinationOver/exIOver'
                             });

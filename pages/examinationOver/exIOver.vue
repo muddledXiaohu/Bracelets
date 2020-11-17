@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
         <text>考试结束返回课程表</text>
 	 </view>
 </template>

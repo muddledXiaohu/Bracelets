@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
         <!-- 学习 -->
         <view class="titles">
             <text class="textH1">

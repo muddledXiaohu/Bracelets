@@ -1,7 +1,7 @@
 <template>
 <!-- 考试倒计时 -->
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
         <view class="delete">距离考试结束还剩</view>
          <view class="Tips">
            {{countdown}}

@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
          <view class="schedule">
             <view class="uni-padding-wrap">
                 <view class="page-section swiper">

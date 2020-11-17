@@ -1,6 +1,12 @@
 {
 	"pages": [
 		{
+			"path": "pages/yhuanInvestigation/EwmLookdisaster",
+			"style": {
+				"navigationBarTitleText": "二维码找隐患"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "手环"
@@ -82,12 +88,7 @@
 				"navigationBarTitleText": "二维码找隐患提示"
 			}
 		},
-		{
-			"path": "pages/yhuanInvestigation/EwmLookdisaster",
-			"style": {
-				"navigationBarTitleText": "二维码找隐患"
-			}
-		},
+
 		{
 			"path": "pages/examinationOver/exIOver",
 			"style": {

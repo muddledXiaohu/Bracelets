@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
 		<s-popup custom-class="demo-popup" position="bottom" v-model="visible">
 				<!-- 内容 -->
 				实人身份验证请正视摄像头

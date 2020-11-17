@@ -1,7 +1,7 @@
 <template>
 <!-- 二维码找隐患 -->
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
          <view class="icons">
             <text class="iconfont icon-delete" @click="OpenQR">&#xe600;</text>
          </view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/index/index",
     "pages/recognition/recognition",
     "pages/success/Facescan",
@@ -13,7 +14,6 @@
     "pages/loginexYes/loginexYes",
     "pages/loginexYes/QRlogin",
     "pages/yhuanInvestigation/lookHiddenD",
-    "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/examinationOver/exIOver",
     "pages/examinationOver/exTimeOver"
   ],
@@ -24,6 +24,5 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#008c8c"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap31.json"
+  "usingComponents": {}
 }

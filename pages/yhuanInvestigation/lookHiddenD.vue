@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
         <text>请将您的手环对准您认为的隐患点二维码扫码</text>
 	 </view>
 </template>

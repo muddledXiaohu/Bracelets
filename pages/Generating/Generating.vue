@@ -1,6 +1,6 @@
 <template>
 	 <view class="content">
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
          <view class="generats">
             <cmd-progress  type="circle" :percent="down" :showInfo="false" :stroke-width="15" :width="200" stroke-color="#21B574">
             </cmd-progress>

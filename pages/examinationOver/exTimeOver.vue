@@ -1,7 +1,7 @@
 <template>
 	 <view class="content">
 		 
-		 <image class="bg-set" src="/assets/images/bgi.jpg"></image>
+		 <image class="bg-set" src="/static/bgi.jpg"></image>
        <text>时间到考试结束</text>
 	 </view>
 </template>
