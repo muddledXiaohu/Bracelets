@@ -20,8 +20,11 @@
 	export default {
 		data() {
 		    return {
+                // 用户预约号
+                number: 0,
                 numbers: 0,
-                answer: []
+                answer: [],
+                object: 0
 			}
 		},
 		onLoad(options) {
@@ -37,6 +40,32 @@
                         // console.log('条码内容：' + res.result);
                         // 答题结束退出
                         if (that.numbers == 9) {
+                            that.getWordCnt(that.answer)
+                            uni.getStorage({
+                                key: 'storage_key',
+                                success: function (res) {
+                                    that.number = res.data.data[0].number
+                                    uni.request({
+                                        url: `http://localhost:5000/fraction/establish`,
+                                        method: 'POST',
+                                        data: {
+                                            "fraction": that.object,
+                                            "number": that.number
+                                        },
+                                        dataType: 'json', 
+                                        header: {
+                                            'content-type': 'application/x-www-form-urlencoded'  //自定义请求头信息
+                                        },
+                                        success: (res) => {
+                                            console.log(res);
+                                            // uni.redirectTo({
+                                            //     url: './loginexYes'
+                                            // });
+                                        }
+                                    })
+                                }
+                            });
+                            console.log(that.object)
                             uni.redirectTo({
                                 url: '../examinationOver/exIOver'
                             });
@@ -51,22 +80,18 @@
                         });
                     }
                 })
-                setTimeout(() => {
-                    uni.request({
-                        url: 'http://localhost:5000/RQLongin',
-                        method: 'POST',
-					    data: {
-					        "username": "qwe"
-                        },
-                        dataType: 'json', 
-                        header: {
-                            'content-type': 'application/x-www-form-urlencoded'  //自定义请求头信息
-                        },
-                        success: (res) => {
-                            console.log(res);
-                        }
-                    })
-                }, 3000);
+            },
+
+            // 获取重复元素个数，输出info1
+            getWordCnt(arr){
+                var obj = {}; 
+                for(var i= 0, l = arr.length; i< l; i++){
+                    var item = arr[i];
+                    obj[item] = (obj[item] +1 ) || 1; 
+                }
+                for (const key in obj) {
+                    this.object = obj['1'] * 10
+                }
             },
 
             // 撤销
@@ -77,10 +102,36 @@
 
             // 退出
             end () {
-                 uni.showModal({
+                const that = this
+                uni.showModal({
                     title: '您是否确定要提前退出考试',
                     success: function (res) {
                         if (res.confirm) {
+                            that.getWordCnt(that.answer)
+                            uni.getStorage({
+                                key: 'storage_key',
+                                success: function (res) {
+                                    that.number = res.data.data[0].number
+                                    uni.request({
+                                        url: `http://localhost:5000/fraction/establish`,
+                                        method: 'POST',
+                                        data: {
+                                            "fraction": that.object,
+                                            "number": that.number
+                                        },
+                                        dataType: 'json', 
+                                        header: {
+                                            'content-type': 'application/x-www-form-urlencoded'  //自定义请求头信息
+                                        },
+                                        success: (res) => {
+                                            console.log(res);
+                                            // uni.redirectTo({
+                                            //     url: './loginexYes'
+                                            // });
+                                        }
+                                    })
+                                }
+                            });
                             uni.redirectTo({
                                 url: '../examinationOver/exIOver'
                             });
