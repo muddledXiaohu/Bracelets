@@ -75,9 +75,9 @@
                         that.numbers = that.answer.length
                         console.log(that.answer, that.numbers)
 
-						uni.navigateBack({
-							url: './EwmLookdisaster'
-                        });
+						// uni.navigateBack({
+						// 	url: './EwmLookdisaster'
+                        // });
                     }
                 })
             },

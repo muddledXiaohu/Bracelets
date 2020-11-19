@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/index/index",
+    "pages/yhuanInvestigation/EwmLookdisaster",
     "pages/recognition/recognition",
     "pages/success/Facescan",
     "pages/Generating/Generating",
@@ -24,6 +24,5 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#008c8c"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap89.json"
+  "usingComponents": {}
 }
